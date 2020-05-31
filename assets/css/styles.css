@@ -4,6 +4,9 @@ body {
   max-height: 100vh;
   margin: 0;
 }
+a {
+  color: white;
+}
 #container {
   display: flex;
   flex-direction: column;
