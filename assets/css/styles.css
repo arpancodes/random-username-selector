@@ -36,15 +36,15 @@ footer {
   margin: 10px;
   display: flex;
   align-items: center;
-  height: 40px;
-  border-radius: 20px;
+  height: 36px;
+  border-radius: 18px;
 }
 footer img {
-  width: 35px;
+  width: 30px;
   margin-right: 5px;
 }
 footer h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 .winner {
