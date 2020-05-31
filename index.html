@@ -8,59 +8,7 @@
       rel="stylesheet"
     />
     <title>Random Username Selector</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #1f4068;
-        color: white;
-        font-family: "Spartan", sans-serif;
-        text-align: center;
-      }
-      textarea {
-        width: 80%;
-        height: 50vh;
-        display: block;
-        border: 3px solid #1b1b2f;
-        color: white;
-        background-color: #e43f5a;
-        padding: 5px;
-        border-radius: 10px;
-      }
-      .pink {
-        color: #e43f5a;
-      }
-      .special {
-        font-size: 2.5rem;
-      }
-      #winner {
-        margin: 15px 0;
-      }
-      footer {
-        align-self: flex-start;
-        background-color: #1b1b2f;
-        padding: 2px 10px;
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        height: 40px;
-        border-radius: 20px;
-      }
-      footer img {
-        width: 35px;
-        margin-right: 5px;
-      }
-      footer h2 {
-        font-size: 1rem;
-      }
-      .winner {
-        font-weight: 900;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <h1>1K special<br /><span class="pink special">Giveaway</span></h1>
@@ -70,25 +18,10 @@
     <!-- show winner -->
     <div id="winner">The winner will show up here</div>
     <footer>
-      <img src="./logo_ARPANCODES.png" />
+      <img src="./assets/images/logo_ARPANCODES.png" />
       <h2>@arpancodes</h2>
     </footer>
 
-    <script>
-      const participants = document.querySelector("textarea");
-      const selectBtn = document.querySelector("button");
-      const winnerDiv = document.querySelector("#winner");
-
-      selectBtn.addEventListener("click", () => {
-        let participantsList = participants.value.split("\n");
-        let totalParticipants = participantsList.length;
-        let winner = Math.floor(Math.random() * totalParticipants);
-
-        winnerDiv.innerHTML =
-          "winner: <span class='pink winner'>@" +
-          participantsList[winner] +
-          "</span>";
-      });
-    </script>
+    <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
