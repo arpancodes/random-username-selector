@@ -41,6 +41,7 @@ function randomRepeater(participantsList, totalParticipants) {
 }
 
 function startChoosing() {
+  selectBtn.blur();
   let participantsList = participants.value.split("\n");
   let totalParticipants = participantsList.length;
   randomRepeater(participantsList, totalParticipants);
