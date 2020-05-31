@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Username Selector</title>
+  </head>
+  <body>
+    <h1>1K special Giveaway</h1>
+    <h2>@arpancodes</h2>
+    <!-- add participants -->
+    <textarea required></textarea>
+    <button>Select Winner</button>
+    <!-- show winner -->
+    <div id="winner">The winner will show up here</div>
+
+    <script>
+      const participants = document.querySelector("textarea");
+      const selectBtn = document.querySelector("button");
+      const winnerDiv = document.querySelector("#winner");
+
+      selectBtn.addEventListener("click", () => {
+        let participantsList = participants.value.split("\n");
+        let totalParticipants = participantsList.length;
+        let winner = Math.floor(Math.random() * totalParticipants);
+
+        winnerDiv.textContent = "winner: @" + participantsList[winner];
+      });
+    </script>
+  </body>
+</html>
