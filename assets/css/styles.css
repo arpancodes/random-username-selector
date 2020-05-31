@@ -1,31 +1,94 @@
 body {
+  background-color: #1f4068;
+  color: white;
+  max-height: 100vh;
+  margin: 0;
+}
+#container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #1f4068;
-  color: white;
   font-family: "Spartan", sans-serif;
   text-align: center;
 }
-textarea {
-  width: 80%;
+h1 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+#text-container {
+  width: 90%;
   height: 50vh;
-  display: block;
+  position: relative;
+  margin: 20px 0;
+}
+textarea {
+  position: absolute;
+  height: 95%;
+  width: 96%;
+  top: 0;
+  left: 0;
   border: 3px solid #1b1b2f;
   color: white;
   background-color: #e43f5a;
   padding: 5px;
   border-radius: 10px;
 }
+#info {
+  position: absolute;
+  border: 3px solid #1b1b2f;
+  color: white;
+  background-color: #e43f5a;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: none;
+}
+#info .num {
+  font-size: 10rem;
+  font-weight: 900;
+}
+.info-winner {
+  display: block;
+  font-weight: 900;
+  text-transform: lowercase;
+}
+
 .pink {
   color: #e43f5a;
 }
 .special {
   font-size: 2.5rem;
 }
+
+button {
+  background-color: #e43f5a;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #1b1b2f;
+  box-shadow: 2px 2px 0 #1b1b2f, 2px 4px 0 #1b1b2f, 2px 6px 0 #1b1b2f,
+    2px 8px 0 #1b1b2f;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  outline: none;
+}
+button:focus {
+  transform: translateY(4px);
+  box-shadow: 2px 2px 0 #1b1b2f, 2px 4px 0 #1b1b2f;
+}
+
 #winner {
   margin: 15px 0;
 }
@@ -38,6 +101,8 @@ footer {
   align-items: center;
   height: 36px;
   border-radius: 18px;
+  position: absolute;
+  bottom: 0px;
 }
 footer img {
   width: 30px;
