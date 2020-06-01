@@ -41,7 +41,7 @@ function randomRepeater(participantsList, totalParticipants) {
 }
 
 function startChoosing() {
-  selectBtn.blur();
+  setTimeout(() => selectBtn.blur(), 100);
   let participantsList = participants.value.split("\n");
   let totalParticipants = participantsList.length;
   randomRepeater(participantsList, totalParticipants);
